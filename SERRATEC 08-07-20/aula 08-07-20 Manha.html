@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 08-07-2020-M</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+        
+         && - || - = - == - === - !=
+ 
+                    1º        2º        3º         4º 
+         EPER - (Entender, Planejar, Executar e Revisar)
+ 
+         */
+
+        /*
+        Problema: Criar um sistema que receba 3 notas 
+        Deve devolver as notas , a soma delas e a média das mesmas
+        Se a média for menor que 60, informar ao usuario se ele foi reprovado
+        Caso contratio deve informar que foi aprovado
+
+        Planejar:
+        1º Criar uma forma de receber 3 notas OK
+            1.1 Utilizar prompt e parseInt 
+        2º Deve devolver as notas informadas OK
+        3º Deve somar as notas e mostrar OK
+        4º Deve calcular as médias e mostrar OK
+        5º Verificar se a média é menor que 60 OK
+            5.1 Se for, mostrar mensagem que ele foi reprovado
+            5.2 Se não for, mostrar mensagem que ele foi aprovado
+
+
+        Executar:
+        Pronto.
+
+        Revisar:
+        1º Deve ser possivel informar 3 notas. OK
+        2º Deve ser possivel visualizar as 3 notas na tela. OK
+        3º Deve ser possivel visualizar a soma das notas. (Verificar se o calculo esta correto) OK
+        4º Deve ser possivel visualizar a médias das notas. (Verificar se o calculo esta correto) OK
+        5º Deve ser possivel visualizar a aprovação. OK
+        6º Deve zerar os valores caso não informar um número. OK
+
+
+        */
+
+        var primeiraNota = parseInt(prompt('digite a primeira nota'));
+        var segundaNota = parseInt(prompt('digite a segunda nota'));
+        var terceiraNota = parseInt(prompt('digite a terceira nota'));
+        const pularLinha = '<br>';
+
+        if (isNaN(primeiraNota)) {
+            primeiraNota = 0;
+        }
+        if (isNaN(segundaNota)) {
+            segundaNota = 0;
+        }
+        if (isNaN(terceiraNota)) {
+            terceiraNota = 0;
+        }
+
+
+        document.write('Primeira nota: ' + primeiraNota + pularLinha);
+        document.write('Segunda nota: ' + segundaNota + pularLinha);
+        document.write('Terceira linha: ' + terceiraNota + pularLinha);
+        document.write(pularLinha);
+
+        var soma = primeiraNota + segundaNota + terceiraNota;
+        document.write('A soma das notas é: ' + soma + pularLinha)
+
+        var media = soma / 3;
+        document.write('A média as notas é: ' + media + pularLinha);
+        document.write(pularLinha);
+
+        if (soma < 60) {
+            document.write('<h1><span style="color: #FF0000">Reprovado :(</span> </h1>');
+        } else {
+            document.write('<h1><span style="color: #0000FF">Aprovado \\o/</span> </h1>');
+        }
+
+
+    </script>
+
+</body>
+
+</html>

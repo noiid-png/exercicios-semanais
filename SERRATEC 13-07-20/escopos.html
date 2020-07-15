@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopos</title>
+</head>
+<body>
+    
+
+    <script>
+        // // Aqui é o escopo Global.
+        // var nome = 'Fulano <br>';
+
+        // // Geralmente chamamos isso de function Scopes.
+        // function teste(){
+        //     // Aqui dentro é um escopo só que local.
+        //     document.write(nome);
+        //     var idade = 25;
+        // }
+
+        // document.write(nome);
+        // teste();
+        // document.write(idade);
+
+        // ======================//======================
+
+        // var nome = "Fulano";
+
+        // function teste(){
+        //     var nome = "Ciclano"
+        //     document.write(nome); //Ciclano
+        // }
+
+        // teste();
+        // document.write(nome); //Fulano
+
+        //====================//=======================//====
+
+            
+        // let nome = "Fulano";
+     
+        // // Block Scope
+        // if(true) { //Aqui não é local, é global também
+        //     let nome ='Ciclano';
+        //     document.write(nome);
+        // }
+
+        // document.write(nome); 
+
+        var nome = "Fulano";
+        var pessoa = {nome: "Beltrano", idade: 21};
+        const pular = '<br>';
+
+        document.write(nome);
+        document.write(pular);
+        document.write(JSON.stringify(pessoa));
+        document.write(pular);
+        document.write(pular);
+
+        var nome2 = nome;
+        var pessoa2 = Object.assign({},pessoa);
+
+        nome2 = "Ciclano";
+        pessoa2.nome = "Ciclano";
+
+        document.write('Segunda parte <br>');
+        document.write(nome2);
+        document.write(pular);
+        document.write(JSON.stringify(pessoa2));
+        document.write(pular);
+        document.write(pular);
+
+        // Se liga na magia .... 
+        document.write('Terceira parte <br>');
+
+        document.write(nome);
+        document.write(pular);
+        document.write(JSON.stringify(pessoa));
+        document.write(pular);
+        document.write(pular);
+
+        // Agora vamos aprender a clonar o nosso objeto.
+
+      
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
